@@ -1,0 +1,42 @@
+/**index.wxss**/
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+
+.container-header {
+  width:100%;
+  background-color:#666666;
+}
+
+.container-header:after{
+  content:" ";
+  display: block;
+  clear: both;
+}
+
+.container-header .scan-qrcode {
+  float:right;
+  width:40px;
+  height:30px;
+  padding:5px;
+  color:#fff;
+  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA/0lEQVRYR+2X7QnCMBCG7yABhRbcwG5g3cANdBQ3sG7gKLpBN7BuUDcQWlBIIKJFMbb1LMQmYPI39/HkJXfJIVheaDk/aABKnSMpYUxBMTY4IOLp1U4pNZLyMqF94Yg4zB92GoAQxRYA518EmSIGmQ5QxlLCnvIFUDvOw0UbQHrb4Dyc0YG6WwhR1OK/K+ABvAJ/r0C5qcowWHYvMtpDiHp8t1oxfQbzFm4oIEQxA8CV+fN9iqjWnIfpXYEKAJJ+ASB5AvScWEvnxh1wRoGmRmESjmxETR8GswD+Q+IV8ArQCtgdTKrRTEZU7TMWZM2jWRnTvixvHc0o51/sW3+Mrq3vxCEzb3nmAAAAAElFTkSuQmCC") no-repeat 50% 50%;
+}
+
