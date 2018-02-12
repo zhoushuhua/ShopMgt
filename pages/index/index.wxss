@@ -31,6 +31,20 @@
   clear: both;
 }
 
+.container-header .search-bar {
+  display: block;
+  margin-right:45px;
+  height:30px;
+  padding:5px;
+  border-radius: 5px;
+}
+
+.container-header .search-bar input{
+  background:#fff;
+  height:100%;
+  width:100%;
+}
+
 .container-header .scan-qrcode {
   float:right;
   width:40px;

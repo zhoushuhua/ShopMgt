@@ -35,6 +35,23 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    goods : {
+      units: ["支", "斤", "条", "袋", "双", "盒", "对", "封"],
+      sorts:[
+        {
+          "id" : "1",
+          "name" : "烟"
+        },
+        {
+          "id": "2",
+          "name": "酒"
+        },
+        {
+          "id": "2",
+          "name": "饲料"
+        }
+      ]
+    }
   }
 })

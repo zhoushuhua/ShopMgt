@@ -23,8 +23,8 @@ Page({
     });
 
     // 导航到添加商品页面
-    // wx.navigateTo({
-    //   url: '/pages/goods/goods'
-    // })
+    wx.navigateTo({
+      url: '/pages/goods/goods'
+    })
   }
 })

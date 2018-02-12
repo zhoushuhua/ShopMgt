@@ -7,12 +7,22 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    units : app.globalData.goods.units,
+    sorts : app.globalData.goods.sorts,
+    index : 0,
+    rdonly : true
   },
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  bindNormalChange: function (e) {
+    console.log('bindNormalChange', e.detail.value)
+    this.setData({
+      index: e.detail.value
     })
   },
   onLoad: function () {

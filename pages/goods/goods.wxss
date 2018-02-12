@@ -1,0 +1,41 @@
+.container {
+  display: block;
+}
+
+.container .section {
+  margin:5px;
+}
+
+.container .section .section__title {
+  font-weight: bold;
+}
+
+.container .section input,
+.container .section textarea {
+  border : 1px solid #eeeeee;
+  height : 30px;
+  line-height: 20px;
+  vertical-align: middle;
+  border-radius: 5px;
+  padding:0px 5px;
+}
+.container .section textarea {
+  min-height:60px;
+}
+
+.container .section.btn-area .btn{
+  display: inline-block;
+  float:left;
+  width:50%;
+}
+
+.container .section.btn-area .btn button{
+  margin-left:5px;
+  background:#e66666;
+}
+
+.container .section.btn-area .btn:first-child button{
+  margin-left:0px;
+  margin-right:5px;
+  background:#5ab53e;
+}
