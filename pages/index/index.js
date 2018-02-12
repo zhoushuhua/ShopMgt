@@ -14,17 +14,17 @@ Page({
     var that = this;
     console.log("test")
     // 扫码获取条码信息
-    // wx.scanCode({
-    //   success: (res) => {
-    //     that.setData({
-    //       "scanRlt": res.result
-    //     });
-    //   }
-    // });
+    wx.scanCode({
+      success: (res) => {
+        that.setData({
+          "scanRlt": res.result
+        });
+      }
+    });
 
     // 导航到添加商品页面
-    wx.navigateTo({
-      url: '/pages/goods/goods'
-    })
+    // wx.navigateTo({
+    //   url: '/pages/goods/goods'
+    // })
   }
 })

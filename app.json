@@ -2,8 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/goods/goods",
-    "images"
+    "pages/goods/goods"
   ],
   "window": {
     "backgroundTextStyle": "light",
