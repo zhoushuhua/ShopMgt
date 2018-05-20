@@ -2,9 +2,20 @@
 <view class="container">
   <view class='container-header'>
     <view class="scan-qrcode" bindtap="sanQrcode"></view>
-    <view class='search-bar'>
-        <input type="search" />
+    <view class='search-bar' >
+        <input type="text" confirm-type='search' value='{{searchText}}' />
     </view>
   </view>
-  {{scanRlt}}
+  <scroll-view class='container-body' scroll-y="true">
+    <view class='goods' wx:for="{{goods}}" wx:for-index="idx" wx:for-item="item">
+      <view class='goods-img'>
+        <image src='../../images/wenhao.png' mode="scaleToFill"></image>
+      </view>
+      <view class='goods-detail'>
+        <view>{{item.name}}</view>
+        <view>价格：￥{{item.price}} / {{units[item.unit]}}</view>
+        <view>介绍：{{item.remark}}</view>
+      </view>
+    </view>
+  </scroll-view>
 </view>

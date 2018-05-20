@@ -10,8 +10,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     units : app.globalData.goods.units,
     sorts : app.globalData.goods.sorts,
-    index : 0,
-    rdonly : true
+    SortIdx: 0,
+    UnitIdx: 0,
+    rdonly : false
   },
   //事件处理函数
   bindViewTap: function () {
@@ -19,13 +20,26 @@ Page({
       url: '../logs/logs'
     })
   },
-  bindNormalChange: function (e) {
+  bindSortChange: function (e) {
     console.log('bindNormalChange', e.detail.value)
     this.setData({
-      index: e.detail.value
+      SortIdx: e.detail.value
     })
   },
-  onLoad: function () {
+  bindUnitChange: function (e) {
+    console.log('bindNormalChange', e.detail.value)
+    this.setData({
+      UnitIdx: e.detail.value
+    })
+  },
+  onLoad: function (option) {
+
+    // 获取条码信息
+    console.log("test", option.barcode)
+    this.setData({
+      "barcode": option.barcode
+    });
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -60,5 +74,8 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  formSubmit: function(e) {
+    console.log("formSubmit:", e)
   }
 })

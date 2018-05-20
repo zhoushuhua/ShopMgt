@@ -2,31 +2,33 @@
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="section section_gap">
       <view class="section__title">条码</view>
-      <input type="text" name="name" disabled="{{rdonly}}"/>
+      <input type="text" name="barcode" value="{{barcode}}" disabled="true"/>
     </view>
     <view class="section section_gap">
       <view class="section__title">商名称</view>
-      <input type="text" name="name" disabled="{{rdonly}}"/>
+      <input type="text" name="name" disabled="{{rdonly}}"/> 
     </view>
     <view class="section">
       <view class="section__title">分类</view>
-      <picker bindchange="bindNormalChange" disabled="{{rdonly}}" value="{{index}}" range-key="name" range="{{sorts}}">
+      <picker bindchange="bindSortChange" disabled="{{rdonly}}" range-key="name" range="{{sorts}}">
         <view class="picker">
-          <input type='text' name="sort" value="{{sorts[index].name}}" disabled="{{rdonly}}"/>
+          <input type='text' value="{{sorts[SortIdx].name}}" disabled="{{rdonly}}"/>
+          <input type='number' name="s_id" value="{{SortIdx}}" style='display:none;'/>
         </view>
       </picker>
     </view>
     <view class="section">
       <view class="section__title">商品单价</view>
-      <input type="number" name="input" style='text-align:right;width:50px;float:left;' disabled="{{rdonly}}"/>
-      <picker bindchange="bindNormalChange" value="{{index}}" disabled="{{rdonly}}" range="{{units}}" style='display:inline-block;float:left;width:60px;line-height:30px;'>
-        <label> 元 / {{units[index]}}</label>
+      <input type="digit" name="price" style='text-align:right;width:50px;float:left;' disabled="{{rdonly}}"/>
+      <picker bindchange="bindUnitChange" disabled="{{rdonly}}" range="{{units}}" style='display:inline-block;float:left;width:60px;line-height:30px;'>
+        <label> 元 / {{units[UnitIdx]}}</label>
+        <input type='number' name="unit" value='{{UnitIdx}}' style='display:none;' />
       </picker>
       <view style='clear:both'></view>
     </view>
     <view class="section">
       <view class="section__title">备注描述</view>
-      <textarea auto-height="true" disabled="{{rdonly}}"/>
+      <textarea auto-height="true" disabled="{{rdonly}}" name="remark"/>
     </view>
     <view class="section btn-area">
       <view class='btn'><button size='default' formType="submit">提交</button></view>
